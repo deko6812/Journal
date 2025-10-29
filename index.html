@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Journal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>DAILY JOURNAL</h1>
+
+    <div class="flex">
+      <div style="flex:1">
+        <label for="date">Date:</label>
+        <input type="date" id="date" />
+      </div>
+      <div style="flex:1">
+        <label for="time">Time:</label>
+        <input type="time" id="time" />
+      </div>
+    </div>
+
+    <div class="grid">
+      <div>
+        <label for="agenda">Agenda:</label>
+        <textarea id="agenda" placeholder="Write your plan for today..."></textarea>
+      </div>
+      <div>
+        <label for="attendees">Attendees:</label>
+        <textarea id="attendees" placeholder="List people you met or worked with..."></textarea>
+      </div>
+      <div>
+        <label for="subject">Subject:</label>
+        <textarea id="subject" placeholder="What's the main focus today?"></textarea>
+      </div>
+      <div>
+        <label for="object">Object:</label>
+        <textarea id="object" placeholder="Your goal or purpose for today..."></textarea>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <label for="notes">Notes:</label>
+      <textarea id="notes" placeholder="Write down your thoughts, feelings, or reflections..."></textarea>
+    </div>
+
+    <div class="video-section">
+      <label for="journal-video">Add a Journal Video:</label>
+      <video id="journal-video" width="100%" height="auto" controls>
+        <source src="videos/sample.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+
+    <button id="saveBtn">💾 Save Journal</button>
+
+    <footer>Designed for your daily reflection ✨</footer>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js"></script>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
